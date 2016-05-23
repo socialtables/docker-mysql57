@@ -1,0 +1,5 @@
+[mysqld]
+# These settings match defaults provided on Amazon AWS RDS and that affect compatability
+explicit_defaults_for_timestamp=1
+innodb_file_per_table=1
+sql_mode=NO_ENGINE_SUBSTITUTION

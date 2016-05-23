@@ -1,0 +1,16 @@
+version: '2'
+services:
+  mysql57:
+    image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./volumes/conf.d:/etc/mysql/conf.d
+    volumes_from:
+      - mysql_data
+  mysql_data:
+    build:
+      context: ./datadir
+      dockerfile: Dockerfile

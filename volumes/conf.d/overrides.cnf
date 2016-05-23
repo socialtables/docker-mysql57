@@ -1,0 +1,11 @@
+[mysqld]
+# These settings match our custom parameter group on Amazon AWS RDS
+general_log=1
+log_bin_trust_function_creators=1
+log_queries_not_using_indexes=1
+log_throttle_queries_not_using_indexes=60
+long_query_time=5
+max_allowed_packet=16777216
+performance_schema=1
+slow_query_log=1
+transaction-isolation=READ-COMMITTED
