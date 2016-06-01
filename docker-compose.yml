@@ -7,10 +7,8 @@ services:
     ports:
       - "3307:3306"
     volumes:
+      - mysqldata:/var/lib/mysql:rw
       - ./volumes/conf.d:/etc/mysql/conf.d
-    volumes_from:
-      - mysql_data
-  mysql_data:
-    build:
-      context: ./datadir
-      dockerfile: Dockerfile
+volumes:
+    mysqldata:
+        driver: local
