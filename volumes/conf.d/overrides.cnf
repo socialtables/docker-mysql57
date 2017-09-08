@@ -9,3 +9,7 @@ max_allowed_packet=16777216
 performance_schema=1
 slow_query_log=1
 transaction-isolation=READ-COMMITTED
+# These are needed for maxwell's daemon
+server-id=1
+log-bin=mysql-bin
+binlog-row-image=FULL
